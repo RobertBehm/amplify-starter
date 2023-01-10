@@ -1,9 +1,18 @@
-import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HomePage } from "./pages";
 
 function App() {
   return (
     <div>
-      <h1>Amplify Starter</h1>
+      <>
+        <Router>
+          <Routes>
+            {/* User Routes */}
+            <Route path="/" element={<HomePage />} />
+            {/* Admin Routes */}
+          </Routes>
+        </Router>
+      </>
     </div>
   );
 }
